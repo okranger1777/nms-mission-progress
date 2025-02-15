@@ -1,17 +1,24 @@
 
 # nms-mission-progress
 
-Work in progress scripts to extract and update MissionProgress in No Man's Sky (NMS) save JSON.
+Work in progress scripts for No Man's Sky (NMS) save JSON, including updating MissionProgress
+with simple YAML input.
 
 ## Introduction
 
-At time of this writing, none of the major NMS save editors provided a way to update MissionProgress,
-where NMS tracks storyline completion.
+At time of this writing, none of the major NMS save editors provided a UI to update MissionProgress,
+where NMS tracks storyline completion. 
 
-This project has demonstration scripts to extract MissionProgress from a save JSON and update 
-using values in the `steps.yaml` file.
+Editing the raw JSON allows completing missions, but can be tedious. For example, see 
+"Complete the Artemis Story w/JSON Data By Geldric™" here:
 
-Example YAML extracts from other save files are in the `references` directory.
+https://steamcommunity.com/sharedfiles/filedetails/?id=3026134039
+
+The original goal was to have an easy NMS Creative "Plus Plus" special save with all missions
+completed and all tech and products unlocked.
+
+The scripts and mission details in the YAML files can also be used to understand save JSON details.
+Ideally, mission completion will be added to NMS save editors.
 
 
 ## Warnings
@@ -19,36 +26,16 @@ Example YAML extracts from other save files are in the `references` directory.
 __USE AT YOUR OWN RISK__
 
 Editing NMS save files is very risky and may result in a corrupt, unplayable save.
-
-Additionally, NMS mission progress is not always simple. For example, you may need a specific 
-technology or item in inventory for a step to work properly. This is particularly true of the
-"Expanding the Base" missions.
+Always keep backups.
 
 For these reasons, test the `update-nms-mission-progress.py` script with a new Creative mode 
 NMS save file until the mechanics are fully documented.
-
-That said, some of the side missions are very straightforward. 
-For example, this YAML clears the "Dreams of the Deep" mission:
-
-```
-^WATERSTORY1: 11
-^WATERSTORY2: 12
-^WATERSTORY3: 12
-^WATERSTORY4: 8
-^WATERSTORY5: 38
-^WATERSTORY_LORE: 10
-```
-
-Also, the Purple systems introduced in Worlds Part II require only one setting and one 
-known technology; the `enable-purple-warp.py` script will update a JSON without requiring
-the mission.
-
 
 ## Requirements
 
 * A new Creative NMS save
 * NMS save editor to export the save file as JSON, tested with https://github.com/goatfungus/NMSSaveEditor
-* (Optional) `jq` to format and query JSON
+* (Optional) `jq` and `gron` to query and format JSON
 * Python with the PyYAML library installed
 
 To install PyYAML:
@@ -58,24 +45,7 @@ pip3 install PyYAML
 
 ## Usage
 
-### `enable-purple-warp.py`
-
-1. Open the NMS save editor, open your new save and Export JSON
-1. Run `./enable-purple-warp.py your-export.json`
-1. In the NMS save editor, import the `out.json` file created by the script
-
-
-### `extract-nms-mission-progress.py`
-
-1. Start a new Creative NMS save
-1. Save a Restore Point with your ship
-1. Quit the save
-1. Open the NMS save editor, open your new save and Export JSON
-
-Simple extract usage:
-```bash
-./extract-nms-mission-progress.py ~/Downloads/mysave.json | sort
-```
+Example YAML extracts from other save files are in the `references` directory.
 
 ### `update-nms-mission-progress.py`
 
@@ -85,40 +55,30 @@ can import using an NMS save editor.
 The example `steps.yaml` completes all MissionProgress in the main storyline
 prior to Worlds Part II as well as several other missions.
 
+### `extract-nms-mission-progress.py`
+
+1. Start a new Creative NMS save
+1. Name your save and create a Restore Point with your ship
+1. Quit the save
+1. Open the NMS save editor, open your save and Export JSON
+1. Run the script, which creates the `out.json` file
+1. In the NMS save edtiro, use Import JSON with `out.json`
+
+Example script command 
 
 ```bash
 ./update-nms-mission-progress.py ~/Downloads/mysave.json
 ```
 
+See [CLI.md](docs/CLI.md) for a longer command line example.
 
-### libNOM CLI
 
-Here is example update usage on a Mac with the libNOM CLI installed and on your PATH: https://github.com/zencq/libNOM.io
+### Extract Missions
 
-Change the first two lines to match your system. If not using Steam, use `libNOM.io.cli -H` to 
-determine the correct format option to use.
+This will output YAML:
 
 ```bash
-
-SAVEDIR="$HOME/Library/Application Support/HelloGames/NMS/st_1234..."
-SAVEFILE="save10.hg"
-
-mkdir backups/$(date +%s)
-cp "$SAVEDIR/$SAVEFILE" backups/$(date +%s)
-cp "$SAVEDIR/mf_$SAVEFILE" backups/$(date +%s)
-
-FNAME=creative.json
-
-# convert save to JSON
-libNOM.io.cli Read -Input "$SAVEDIR/$SAVEFILE" -J True > "$HOME/Downloads/$FNAME"
-
-# update script writes to out.json
-./update-nms-mission-progress.py "$HOME/Downloads/$FNAME"
-
-# write JSON to save
-cat out.json | libNOM.io.cli Write -O st -F Steam -I 1
-mv st/*data "$SAVEDIR/$SAVEFILE"
-mv st/*meta "$SAVEDIR/mf_$SAVEFILE"
+./extract-nms-mission-progress.py ~/Downloads/mysave.json | sort
 ```
 
 
