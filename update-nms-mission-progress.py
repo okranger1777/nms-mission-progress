@@ -34,6 +34,18 @@ def complete_step(data, mission_name, mission_index):
     logging.info(f'Set mission {m} to {step_ref[mission_name]}')
 
 
+def add_product(data, product):
+  products = data['BaseContext']['PlayerStateData']['KnownProducts']
+  if product not in products:
+    products.append(product)
+
+
+def add_tech(data, tech):
+  tech_known = data['BaseContext']['PlayerStateData']['KnownTech']
+  if tech not in tech_known:
+    tech_known.append(tech)
+
+
 missions = data['BaseContext']['PlayerStateData']['MissionProgress']
 for idx, i in enumerate(missions):
   m = i['Mission']
@@ -43,40 +55,36 @@ for idx, i in enumerate(missions):
     complete_step(data, m, idx)
 
 # set by first Anomaly conversations
+data['BaseContext']['PlayerStateData']['HasAccessToNexus'] = True
 data['BaseContext']['PlayerStateData']['RevealBlackHoles'] = True
 data['BaseContext']['PlayerStateData']['FirstAtlasStationDiscovered'] = True
+# after In Stellar Multitudes
+data['BaseContext']['PlayerStateData']['HasDiscoveredPurpleSystems'] = True
 
-# required and convenience
-products = data['BaseContext']['PlayerStateData']['KnownProducts']
-products.append('^U_ADAPTOR')
-products.append('^U_ADAPTORCUBE')
-products.append('^PURPM_PACKET')
-products.append('^PURPM_LUSH_KEY')
-products.append('^PURPM_MIRROR')
+# required for completing Artemis Path, Atlas Path, and Stellar Multitudes
+add_product(data, '^BUILDSIGNAL')
+add_product(data, '^ATLAS_SEED_2')
+add_product(data, '^ATLAS_SEED_3')
+add_product(data, '^ATLAS_SEED_4')
+add_product(data, '^ATLAS_SEED_5')
+add_product(data, '^ATLAS_SEED_6')
+add_product(data, '^ATLAS_SEED_7')
+add_product(data, '^ATLAS_SEED_8')
+add_product(data, '^ATLAS_SEED_9')
+add_product(data, '^ATLAS_SEED_10')
+add_product(data, '^ATLAS_SEED_1')
+add_product(data, '^U_ADAPTOR')
+add_product(data, '^U_ADAPTORCUBE')
+add_product(data, '^PURPM_PACKET')
+add_product(data, '^PURPM_LUSH_KEY')
+add_product(data, '^PURPM_MIRROR')
 
-tech = data['BaseContext']['PlayerStateData']['KnownTech']
-tech.append('^FRE_ROOM_TELEPO')
-tech.append('^FRE_ROOM_SCAN')
-tech.append('^FRE_ROOM_TECH')
-tech.append('^FRE_ROOM_SHOP')
-tech.append('^FRE_ROOM_PLANT0')
-tech.append('^FRE_ROOM_PLANT1')
-tech.append('^ATLAS_SEED_1')
-tech.append('^ATLAS_SEED_2')
-tech.append('^ATLAS_SEED_3')
-tech.append('^ATLAS_SEED_4')
-tech.append('^ATLAS_SEED_5')
-tech.append('^ATLAS_SEED_6')
-tech.append('^ATLAS_SEED_7')
-tech.append('^ATLAS_SEED_8')
-tech.append('^ATLAS_SEED_9')
-tech.append('^ATLAS_SEED_10')
-tech.append('^STAFF_PART_A')
-tech.append('^STAFF_PART_B')
-tech.append('^STAFF_PART_C')
-tech.append('^UT_BUI_SCAN')
-tech.append('^UT_BUI_SCAN2')
-tech.append('^HDRIVEBOOST4')
+add_tech(data, '^STRONGLASER')
+add_tech(data, '^STARSUIT')
+add_tech(data, '^STAFF_PART_A')
+add_tech(data, '^STAFF_PART_B')
+add_tech(data, '^STAFF_PART_C')
+add_tech(data, '^HDRIVEBOOST4')
 
 with open("out.json", "w") as outfile:
     json.dump(data, outfile, indent=2)
