@@ -76,7 +76,6 @@ add_product(data, '^ATLAS_SEED_1')
 add_product(data, '^U_ADAPTOR')
 add_product(data, '^U_ADAPTORCUBE')
 add_product(data, '^PURPM_PACKET')
-add_product(data, '^PURPM_LUSH_KEY')
 add_product(data, '^PURPM_MIRROR')
 
 add_tech(data, '^STRONGLASER')

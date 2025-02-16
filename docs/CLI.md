@@ -54,4 +54,8 @@ The `gron` text files can also be compared in an editor such as VS Code.
 ## Other Scripts
 See the `scripts` directory for other utility scripts. 
 
+* `create-json-and-gron-txt [directory-containing-one-save.hg]` - Create a JSON export in the dir and expand the JSON into text for easy compare
 
+* `enable-purple-warp.py` - Minimal changes to a JSON export to enable warp to Purple systems
+
+* `hotkeys.py` - Set quick menu hot keys in a JSON export for Multi-Tool swap, Toggle Third-Person View, Photo Mode, etc.

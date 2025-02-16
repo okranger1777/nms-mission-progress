@@ -33,10 +33,10 @@ NMS save file until the mechanics are fully documented.
 
 ## Requirements
 
-* A new Creative NMS save
-* NMS save editor to export the save file as JSON, tested with https://github.com/goatfungus/NMSSaveEditor
-* (Optional) `jq` and `gron` to query and format JSON
-* Python with the PyYAML library installed
+* A new Creative NMS save file
+* NMS save editor to export as JSON, tested with https://github.com/goatfungus/NMSSaveEditor
+* (Optional) To query and format JSON, `jq` and `gron` and the Python library `compact-json`
+* Python and the library `PyYAML`
 
 To install PyYAML:
 ```bash
@@ -62,7 +62,7 @@ prior to Worlds Part II as well as several other missions.
 1. Quit the save
 1. Open the NMS save editor, open your save and Export JSON
 1. Run the script, which creates the `out.json` file
-1. In the NMS save edtiro, use Import JSON with `out.json`
+1. In the NMS save editor, use Import JSON with `out.json`
 
 Example script command 
 

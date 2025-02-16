@@ -3,7 +3,7 @@ import io
 import sys
 import json
 
-if len(sys.argv) < 1:
+if len(sys.argv) < 2:
   print(f'Usage: {sys.argv[0]} EXPORTED-NMS-SAVE-JSON-FILE')
   sys.exit()
 
