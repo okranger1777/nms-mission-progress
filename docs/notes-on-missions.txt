@@ -1,0 +1,121 @@
+
+These are rough notes of what each Mission ID does, taken while playing.
+
+TUT_NEXT1
+TUT_BASEBUILD 	- Terrain Manip and Base
+TUT_NEXT2	- Hyperdrive
+TUT_NEXT3	- Antimatter (abandoned terminal)
+TUT_NEXT4	- 
+TUT_NEXT5	- Plaque
+TUT_TRANSITION	- head into space, coordinates received
+ACT1_STEP2	- strangers distress beacon, Adv Mining (2 wiring looms)
+ACT1_STEP3	- ship into space, Nada Anomoly message
+BASE_UPGRADE1	- Base storage container
+UT_MINER	- upgrade secondary
+NEXUS_DEFAULT	- visit your old friends?
+ACT1_STEP4	- Artemis Holo-Terminal 1
+BASE_UPGRADE2	- Base solar panel
+BASE_UPGRADE3	- Base teleport receiver - buy Economy Scanner WLx3
+BASE_UPGRADE4	- Base neural stimulator
+BASE_UPGRADE5	- Base efficient thrusters - WLx2
+BASE_UPGRADE6	- Base shield lattice
+BASE_UPGRADE7	- Base Coloured Light
+BASE_UPGRADE8	- Base Appearance Mod
+BASE_UPGRADE9	- Base Roamer Geobay
+BASE_UPGRADE10	- Base Landing Pad
+BASE_UPGRADE11	- off world abandoned archive, new system
+BASE_UPGRADE12	- off world abandoned archive, new system
+UT_HOT		- ???
+SENTINEL_CRASH	- sentinel crash
+ACT1_STEP5	- signal booster triangulate 33%
+ACT1_STEP5	- signal booster triangulate 66% Drop Pod
+ACT1_STEP5	- signal booster triangulate 100% Observatory
+ACT1_STEP5	- holo-terminal, Artemis Translator
+ACT1_STEP6	- calibrate translator Minor Settlement
+ACT1_STEP6	- calibrate translator Ruins 
+ACT1_STEP6	- calibrate translator Knowledge Stone
+ACT1_STEP6	- calibrate translator ask a lifeform Trading Post
+ACT1_STEP6	- calibrate translator raise reputation rank
+ACT1_STEP7	- return to space and tell Artemis
+ACT1_STEP8	- Apollo holo-term, expand your base
+OVERSEER1	- build const terminal
+ACT1_STEP9	- Find Apollo contact and hire
+OVERSEER2	- Chromatic metal, gives Glass recipe
+SCIENTIST1	- hire scientist, gives Acid and Lubricant
+SCIENTIST2	- give Marrow and Cobalt, gives MicroP and Large Refiner, take Core to Observ
+SCIENTIST3	- reinsert core, wait 1h30m
+ACT1_STEP9	- Apollo sends to building, gives Personal Forcefield
+ACT1_STEP10	- 
+ACT1_STEP11	- raid Korvax facility, gives HazMat Gauntlet
+ACT1_STEP12	- contact Apollo in space, leylines 1/3
+ACT1_STEP13	- leylines 2/3
+ACT1_STEP13	- leylines 3/3
+ACT1_STEP13	- leylines portal
+ACT2_STEP1	- through portal, find your ship
+ACT2_STEP2	- Artemis grave
+ACT2_STEP3	- Holo term, meet Null, gives Mind Ark
+SCIENTIST4	- visit Observatory, gives Living Glass and Save Beacon
+SCIENTIST4	- build Beacon, gives Autonomous Mining and Atmos Harvester
+SCIENTIST4	- scan 5 animals, gives Unstable Gel
+SCIENTIST4	- give Ion Batteries, gives Poly Fibre, wait 1h30m
+SCIENTIST8	- core taken to Monolith, gives Circuit Board
+SCIENTIST8	- give Convergence Cube, gives Heat Capacitor
+ACT2_STEP6	- get Portal coords for Apollo
+ACT2_STEP7	- give Portal coords, get Observatory mission from Null
+ACT2_STEP8	- go to crashed freighter, Holo Transmitter with Null
+ACT2_STEP9	- speak to Vykeen cartographer, get artifact, return
+ACT2_STEP10	- speak to Korvax cartographer, get artifact, return
+WEAPGUY1	- recruit
+WEAPGUY2	- raid weapons factory, gives Phase Beam
+WEAPGUY3	- pirates
+WEAPGUY4	- depot
+WEAPGUY5	- daggers, gives Infra-Knife Accel etc
+BASE_UPGRADE13	- go to abandoned location in another system, learn lore
+BASE_UPGRADE14	- same
+BASE_UPGRADE15	- same
+BASE_UPGRADE16	- same
+SETTLEMENT_PRE	- distress signal
+BASE_UPGRADE17	- same
+BASE_UPGRADE18	- same
+BASE_UPGRADE19	- same
+BASE_UPGRADE20	- same
+BASE_UPGRADE21	- base gives 1x Salvaged Data, end of missions
+ACT2_STEP11	- speak to Gek cartographer, do 2 Gek missions, return
+OVERSEER10	- give 100 Mordite
+SENTINELS_1	- 
+SENTINELS_2	- go to pillar
+SENTINELS_3	- go to scrambled coords to Manuf Facility for Minotaur Left Arm 
+EXOTUT1		- 
+EXOTUT2		- exocraft radar
+EXOTUT3		- exocraft cannon, get news at terminal
+ACT2_STEP12	- speak to Null at Holo Term, get signal coords
+EXOTUT4		- exocraft mining laser
+EXOTUT5		- bring Mag Ferrite, get radar boost
+EXOTUT9		- nanites, go to Monolith
+EXOTUT10	- Nal news, get Colossus
+EXOTUT11	- build Colossus, request more nanites
+EXOTUT12	- Nomad
+EXOTUT13	- hack terminal, end of exocraft line
+ACT2_STEP13	- use Portal, speak to Atlas
+ACT3_STEP1	- new planet, find your ship
+ACT3_STEP2	- speak to Nada and Polo
+SENTINELS_4	- settlers return, Minotaur Legs
+SENTINELS_5	- retreive Pristine Brain and build Minotaur
+SENTINELS_5	- attack a Pillar by freighter crash, completed
+WATERSTORY2	- build and fuel Nautilon
+WATERSTORY3	- explore the acquatic structure, get HP Sonar
+SUB_BINOCS	- install High-Power Sonar
+WATERSTORY4	- find Sunken Freighter, get Base parts
+WATERSTORY5	- find Sunken Building 1 2 and 3
+ATLAS1		- return to the Atlas Interface, get Glyph 3, 2x Warp
+ATLAS2		- next Atlas, get Glyph 4, 2x Warp
+ATLAS3		- next Atlas
+ATLAS7		- Null communication
+
+
+FREIGHT_DEFEND	- space rescue
+FLEET_TUT	- claim freighter and send expedition
+
+SETTLEMENT
+EXPLORE_LOG
+

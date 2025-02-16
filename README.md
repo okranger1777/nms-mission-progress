@@ -55,8 +55,6 @@ can import using an NMS save editor.
 The example `steps.yaml` completes all MissionProgress in the main storyline
 prior to Worlds Part II as well as several other missions.
 
-### `extract-nms-mission-progress.py`
-
 1. Start a new Creative NMS save
 1. Name your save and create a Restore Point with your ship
 1. Quit the save
@@ -73,7 +71,7 @@ Example script command
 See [CLI.md](docs/CLI.md) for a longer command line example.
 
 
-### Extract Missions
+### `extract-nms-mission-progress.py`
 
 This will output YAML:
 
