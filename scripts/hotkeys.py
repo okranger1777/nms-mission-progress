@@ -25,7 +25,7 @@ ship = [ { "Action": {"QuickMenuActions": "None"}, "Id": "^", "Number": 0, "Inve
         { "Action": {"QuickMenuActions": "EconomyScan"}, "Id": "^", "Number": 1, "InventoryIndex": {"X": -1, "Y": -1} }, 
         { "Action": {"QuickMenuActions": "ThirdPersonShip"}, "Id": "^", "Number": 0, "InventoryIndex": {"X": -1, "Y": -1} }, 
         { "Action": {"QuickMenuActions": "CallFreighter"}, "Id": "^", "Number": 0, "InventoryIndex": {"X": -1, "Y": -1} }, 
-        { "Action": {"QuickMenuActions": "None"}, "Id": "^", "Number": 0, "InventoryIndex": {"X": -1, "Y": -1} }, 
+        { "Action": {"QuickMenuActions": "SummonNexus"}, "Id": "^", "Number": 0, "InventoryIndex": {"X": -1, "Y": -1} }, 
         { "Action": {"QuickMenuActions": "PhotoMode"}, "Id": "^", "Number": 0, "InventoryIndex": {"X": -1, "Y": -1} } ]
 exocraft = [ { "Action": {"QuickMenuActions": "None"}, "Id": "^", "Number": 0, "InventoryIndex": {"X": -1, "Y": -1} },
         { "Action": {"QuickMenuActions": "None"}, "Id": "^", "Number": 0, "InventoryIndex": {"X": -1, "Y": -1} }, 
@@ -41,6 +41,8 @@ exocraft = [ { "Action": {"QuickMenuActions": "None"}, "Id": "^", "Number": 0, "
 data['BaseContext']['PlayerStateData']['HotActions'][0]['KeyActions'] = player
 data['BaseContext']['PlayerStateData']['HotActions'][1]['KeyActions'] = ship
 data['BaseContext']['PlayerStateData']['HotActions'][2]['KeyActions'] = exocraft
+
+# https://www.reddit.com/r/NoMansSkyTheGame/comments/1iqxjm6/how_to_use_quick_menu_hotkeys_on_mac_partly/
 
 with open("out.json", "w") as outfile:
     json.dump(data, outfile, indent=2)
