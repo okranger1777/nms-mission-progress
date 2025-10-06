@@ -89,8 +89,17 @@ This will output YAML:
 ./extract-nms-mission-progress.py ~/Downloads/exported/save123.hg.json | sort
 ```
 
+### `nomanssave-rewards.py`
+
+MacOS specific, see https://gist.github.com/okranger1777/1da6e36e9b28aa9fdff5c2203fdd4802
+
+Run this script in unzipped NMSSaveEditor.jar nomanssave/db folder to read "rewards.xml"
+and print expedition rewards for MacOS `GcUserSettingsData.mxml` file.
+
+
 ## License
 
 This project is licensed under the MIT license - see the [LICENSE](LICENSE)
 file for details.
+
 
