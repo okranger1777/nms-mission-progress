@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 import xml.etree.ElementTree as ET
 # reads "rewards.xml" from unzipped NMSSaveEditor.jar nomanssave/db folder
-# prints expedition rewards for MacOS GcUserSettingsData.mxml 
+# prints expedition rewards for MacOS GcUserSettingsData.mxml
+# cd "$HOME/Library/Application Support/HelloGames/NMS/SETTINGS/"
 # see https://gist.github.com/okranger1777/1da6e36e9b28aa9fdff5c2203fdd4802
 
 def read_xml_file(filename):
@@ -19,7 +20,7 @@ def read_xml_file(filename):
 mylist = []
 if __name__ == "__main__":
   root_element = read_xml_file("rewards.xml")
-  if root_element:
+  if root_element is not None:
     for e in root_element.findall('season'):
       r = e.get('id')
       mylist.append(r[1:])
@@ -27,6 +28,3 @@ if __name__ == "__main__":
 mylist.sort()
 for index, item in enumerate(mylist):
   print(f'\t\t<Property name="UnlockedSeasonRewards" value="{item}" _index="{index}" />')
-
-
-
